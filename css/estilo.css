@@ -1,0 +1,303 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Configurações padrões para todas as tags */
+*{
+	box-sizing: border-box;
+	margin: 0;
+	text-decoration: none;
+	scroll-behavior: smooth;
+}
+
+/* Instalando fontes personalizadas no servidor */
+@font-face{src: url("../fontes/Roboto-Thin.ttf");font-family: roboto-thin;}
+@font-face{src: url("../fontes/Roboto-Regular.ttf");font-family: roboto-regular;}
+@font-face{src: url("../fontes/Roboto-Black.ttf");font-family: roboto-black;}
+
+body, html{
+	width: 100%;
+	height: 100%;
+	font-family: roboto-regular;
+	font-size: 16px;
+	color: #666666;
+}
+nav{
+	width: 100%;
+	background-color: #333333;
+	text-align: center;
+	position: fixed;
+	z-index: 2;
+}
+nav a{
+	color: #FFFFFF;
+	font-family: roboto-thin;
+	display: inline-block;
+	padding: 0.5% 2% 2%;
+	font-size: 18px;
+	letter-spacing: 2px;
+	margin-top: 1.5%;
+	border-top: 3px solid transparent;
+}
+nav a:hover{
+	border-color: #FFCC00;
+	color: #FFCC00;
+}
+header{
+	width: 100%;
+	height: 100%;
+	background-image: url("../imagens/header-bg.jpg");
+	background-size: cover;
+	background-position: center 20%;
+}
+
+header h2{
+	text-align: center;
+	padding-top: 20%;
+	color: #FFFFFF;
+	font-family: roboto-thin;
+	font-weight: lighter;
+	font-size: 46px;
+}
+header h3{
+	text-align: center;
+	color: #FFFFFF;
+	font-size: 60px;
+	font-family: roboto-black;
+}
+section{
+	width: 100%;
+	height: 100%;
+	padding-top: 8%;
+}
+.titulo{
+	text-align: center;
+	font-family: roboto-black;
+	font-size: 30px
+}
+.barra{
+	width: 5%;
+	margin: auto;
+	border-bottom: 2px solid #FFCC00;
+}
+.subtitulo{
+	text-align: center;
+	font-family: roboto-thin;
+	margin: 1%;
+}
+#servicos article, #portfolio article, #equipe article{
+	width: 30%;
+	margin-left: 2.5%;
+	float: left;
+	margin-top: 5%;
+	text-align: center;
+}
+.iconserv{
+	width: 180px;
+	height: 180px;
+	background-color: #FFCC00;
+	margin: auto;
+	border-radius: 50%;
+	font-size: 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	transition: 0.5s;
+}
+.iconserv:hover{
+	transform: rotate(360deg);
+	background-color: #666666;
+	color: #FFCC00;
+}
+.tituloserv{
+	font-family: roboto-black;
+	margin: 4%;
+}
+.descriserv{
+	text-align: justify;
+}
+#portfolio{
+	background-color: #000000;
+	color: #FFFFFF;
+	height: 170%;
+}
+#portfolio article div{
+	width: 100%;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+}
+#portfolio img{
+	width: 100%;
+	transform: scale(1.1);
+	transition: 0.4s;
+}
+.tituloport{
+	font-family: roboto-black;
+	margin-top: 4%;
+}
+#portfolio article div i{
+	position: absolute;
+	font-size: 60px;
+	color: #FFFFFF;
+	z-index: 1;
+	left: 0;
+	right: 0;
+	margin: auto;
+	top: 40%;
+	transition: 0.5s;
+	transform: scale(0);
+}
+#portfolio article div:hover img{
+	transform: scale(1);
+	opacity: 0.5;
+	filter: blur(2px);
+}
+#portfolio article div:hover i{
+	transform: scale(1);
+}
+.empresa1, .empresa2, .empresa3, .empresa4{
+	width: 100%;
+	padding: 2%;
+	border: 2px solid #FFCC00;
+}
+.bola1, .bola2, .bola3, .bola4{
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+	float: left;
+	margin: 0 4%;
+}
+.empresa1, .empresa3{
+	padding-right: 30%;
+	background: linear-gradient(90deg, #FFF 72%, #FFCC00 72%);
+}
+.empresa2, .empresa4{
+	padding-left: 30%;
+	background: linear-gradient(90deg, #FFCC00 28%, #FFF 28%);
+}
+.bola1{
+	background-image: url("../imagens/11.jpg");
+	background-size: cover;
+}
+.bola2{
+	background-image: url("../imagens/22.jpg");
+	background-size: cover;
+}
+.bola3{
+	background-image: url("../imagens/33.jpg");
+	background-size: cover;
+}
+.bola4{
+	background-image: url("../imagens/44.jpg");
+	background-size: cover;
+}
+.tituloempresa{
+	font-family: roboto-black;
+	font-size: 20px;
+	float: left;
+}
+.descriempresa{
+	text-align: justify;
+}
+#empresa{
+	margin-bottom: 33%;
+}
+#equipe{
+	background-color: #000000;
+	color: #FFFFFF;
+}
+#equipe article img{
+	border-radius: 50%;
+	border: 5px solid #FFCC00;
+}
+.nome{
+	font-family: roboto-black;
+}
+.cargo{
+	font-family: roboto-thin;
+	margin-bottom: 2%;
+}
+#equipe article a{
+	font-size: 20px;
+	color: #CCCCCC;
+	margin: 2%;
+}
+#equipe article a:hover{
+	color: #FFCC00;
+}
+#contato{
+	padding-left: 2%;
+	padding-right: 2%;
+}
+#contato article{
+	width: 50%;
+	float: left;
+	margin-top: 2%;
+	padding: 2%;
+	height: 80%;
+}
+.campo{
+	width: 100%;
+	margin: 0.3%;
+	padding: 2%;
+	font-size: 16px;
+	font-family: roboto-regular;
+	resize: none;
+}
+.botao{
+	width: 100%;
+	margin: 0.3%;
+	padding: 2%;
+	border: 2px solid #333333;
+	background-color: #333333;
+	color: #FFFFFF;
+	font-size: 16px;
+	font-family: roboto-regular;
+	cursor: pointer;
+}
+.botao:hover{
+	border-color: #FFCC00;
+	background-color: transparent;
+	color: #333333;
+}
+footer{
+	width: 100%;
+	background-color: #000000;
+	color: #FFFFFF;
+	padding: 1%;
+	margin-top: 1%;
+}
+.popup{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background-color: rgba(0,0,0,0.8);
+	z-index: 10;
+	display: none;
+}
+.news{
+	width: 700px;
+	height: 450px;
+	background-image: url("../imagens/banner-ebook.png");
+	z-index: 11;
+	position: fixed;
+	left: 0;
+	right: 0;
+	margin: auto;
+	top: 15%;
+	display: none;
+}
+.formulario{
+	width: 40%;
+	position: absolute;
+	right: 1%;
+	bottom: 13%;
+}
+.fechar{
+	float: right;
+	background-color: transparent;
+	border: none;
+	padding: 1%;
+	cursor: pointer;
+}
